@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""we flask app starts
+"""web flask app starts
 """
 from flask import Flask
 
@@ -24,7 +24,7 @@ def hbnb():
 
 @app.route('/c/<text>')
 def c_is_fun(text):
-    """prints "C" 
+    """prints "C" followed by the value of the text variable
     """
     return 'C {}'.format(text.replace('_', ' '))
 
@@ -32,7 +32,7 @@ def c_is_fun(text):
 @app.route('/python')
 @app.route('/python/<text>')
 def python_is_magic(text='is cool'):
-    """prints “Python ”, 
+    """prints “Python ”, followed by the value of the text
     """
     return 'Python {}'.format(text.replace('_', ' '))
 
