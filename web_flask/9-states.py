@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""web flask app starts
+"""web flask application start here
 """
 from flask import Flask, render_template
 from models import storage
@@ -19,7 +19,7 @@ def close_db(exc):
 
 @app.route('/states')
 def states():
-    """display a HTML page
+    """display a HTML page: (inside the tag BODY)
     """
     states = storage.all("State")
     return render_template("9-states.html", state=states)
@@ -27,7 +27,7 @@ def states():
 
 @app.route('/states/<id>')
 def cities_by_states(id):
-    """display a HTML page
+    """display a HTML page: (inside the tag BODY)
     """
     for state in storage.all("State").values():
         if state.id == id:
